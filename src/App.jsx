@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div className="overflow-hidden">
+      <Navbar />
+    </div>
+  );
+};
 
-export default App
+export default App;

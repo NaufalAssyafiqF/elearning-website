@@ -3,9 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      coolors: {
-        primary: "#f97316",
-        secondary: "#64748b",
+      colors: {
+        primary: "#ffcf3a",
+        secondary: "#0063ff",
       },
       container: {
         center: true,
@@ -15,8 +15,8 @@ export default {
           lg: "4rem",
           xl: "5rem",
           "2xl": "6rem",
-        }
-      }
+        },
+      },
     },
   },
   plugins: [],
