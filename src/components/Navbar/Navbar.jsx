@@ -2,11 +2,18 @@
 import { MdComputer, MdMenu } from "react-icons/md";
 import { NavbarMenu } from "../../mockdata/data";
 import ResponsiveMenu from "./ResponsiveMenu";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav>
+      <motion.nav
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
         <div className="container flex justify-between items-center py-6">
           {/* logo section */}
           <div className="text-2xl flex items-center gap-2 font-bold">
@@ -41,14 +48,14 @@ const Navbar = () => {
           </div>
 
           {/* mobile humberger menu */}
-          <div className="lg:hidden">
+          <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             <MdMenu className="text-4xl" />
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Mobile sidebar action */}
-      <ResponsiveMenu />
+      <ResponsiveMenu isOpen={isOpen} />
     </>
   );
 };

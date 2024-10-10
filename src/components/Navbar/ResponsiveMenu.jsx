@@ -1,9 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 
-const ResponsiveMenu = () => {
+
+// eslint-disable-next-line react/prop-types
+const ResponsiveMenu = ({ isOpen }) => {
   return (
     <AnimatePresence mode="wait">
-      {open && (
+      {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
