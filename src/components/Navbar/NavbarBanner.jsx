@@ -12,7 +12,7 @@ const NavbarBanner = () => {
       >
         Are you a university or school student for an online tutoring
         partnership?{" "}
-        <a href="" className="text-secondary ml-2">
+        <a href="#" className="text-secondary ml-2">
           talk to us
         </a>
         <div
